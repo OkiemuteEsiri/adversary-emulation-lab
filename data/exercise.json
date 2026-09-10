@@ -1,0 +1,39 @@
+{
+  "exercise_id": "AE-2026-001",
+  "name": "Synthetic Identity and Endpoint Detection Validation",
+  "environment": "isolated-lab",
+  "owner": "Purple Team Lab",
+  "authorized": true,
+  "production": false,
+  "stop_conditions": [
+    "unexpected external network communication",
+    "telemetry loss from the isolated lab",
+    "any scope ambiguity"
+  ],
+  "techniques": [
+    {
+      "technique_id": "T1078",
+      "name": "Valid Accounts",
+      "tactic": "Defense Evasion / Persistence / Privilege Escalation / Initial Access",
+      "objective": "Validate alerting on synthetic anomalous sign-in context without using real credentials.",
+      "expected_telemetry": ["identity-provider", "siem"],
+      "approved": true
+    },
+    {
+      "technique_id": "T1059.001",
+      "name": "PowerShell",
+      "tactic": "Execution",
+      "objective": "Validate benign PowerShell process telemetry using a harmless local command.",
+      "expected_telemetry": ["endpoint-process", "siem"],
+      "approved": true
+    },
+    {
+      "technique_id": "T1021.001",
+      "name": "Remote Desktop Protocol",
+      "tactic": "Lateral Movement",
+      "objective": "Validate synthetic RDP logon telemetry between isolated lab hosts.",
+      "expected_telemetry": ["windows-security", "network-flow", "siem"],
+      "approved": true
+    }
+  ]
+}
