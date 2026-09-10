@@ -1,0 +1,8 @@
+[
+  {"technique_id":"T1078","telemetry_source":"identity-provider","outcome":"detected","evidence":"SYN-ID-1042"},
+  {"technique_id":"T1078","telemetry_source":"siem","outcome":"detected","evidence":"SIEM-ALERT-210"},
+  {"technique_id":"T1059.001","telemetry_source":"endpoint-process","outcome":"detected","evidence":"EDR-EVT-5521"},
+  {"technique_id":"T1059.001","telemetry_source":"siem","outcome":"not_detected","evidence":"QUERY-PS-044"},
+  {"technique_id":"T1021.001","telemetry_source":"windows-security","outcome":"detected","evidence":"WIN-EVT-4624-LAB"},
+  {"technique_id":"T1021.001","telemetry_source":"siem","outcome":"detected","evidence":"SIEM-ALERT-244"}
+]
